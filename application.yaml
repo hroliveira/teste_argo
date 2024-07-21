@@ -4,7 +4,7 @@ metadata:
   name: teste-argo
   namespace: argocd
 spec:
-  project: default
+  project: TesteArgo
   source:
     repoURL: 'https://github.com/hroliveira/teste_argo'
     targetRevision: HEAD
