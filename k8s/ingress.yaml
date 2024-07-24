@@ -2,18 +2,50 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: teste-argo-ingress
-  namespace: default
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    {}
+    #  key: string
+  labels:
+    {}
+    #  key: string
+  namespace: default
 spec:
+  ingressClassName: nginx
   rules:
-    - host: teste.argo.rancher.hro.dev.br
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: teste-argo-service
-                port:
-                  number: 80
+    - vKey: 3397593624
+      host: teste.argo.rancher.hro.dev.br
+#    - host: string
+#      http:
+#        paths:
+#          - backend:
+#              resource:
+#                apiGroup: string
+#                kind: string
+#                name: string
+#              service:
+#                name: string
+#                port:
+#                  name: string
+#                  number: int
+#            path: string
+#            pathType: string
+  tls:
+#    - hosts:
+#        - string
+#      secretName: string
+  backend:
+    {}
+#  defaultBackend:
+#    resource:
+#      apiGroup: string
+#      kind: string
+#      name: string
+#    service:
+#      name: string
+#      port:
+#        name: string
+#        number: int
+__clone: true
+cacheObject:
+  useNestedBackendField: true
+  showPathType: true
