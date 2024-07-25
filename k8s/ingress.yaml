@@ -29,23 +29,9 @@ spec:
 #                  number: int
 #            path: string
 #            pathType: string
-  tls:
+  #tls:
 #    - hosts:
 #        - string
 #      secretName: string
-  backend:
-    {}
-#  defaultBackend:
-#    resource:
-#      apiGroup: string
-#      kind: string
-#      name: string
-#    service:
-#      name: string
-#      port:
-#        name: string
-#        number: int
-__clone: true
-cacheObject:
-  useNestedBackendField: true
-  showPathType: true
+
+
